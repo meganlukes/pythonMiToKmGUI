@@ -31,8 +31,15 @@ def calculate(n, **kwargs):
    print(n)
 
 # calculate(name="Megan", number=28)
-calculate(3, add=3, multiply=2)
+# calculate(3, add=3, multiply=2)
+
+class Bamboo:
+
+   def __init__(self, **kw):
+      self.sci_name = kw.get("sci_name")
+      self.com_name = kw.get("com_name") #using kw.get("com_name" instead of kw["com_name"] makes this field optional
 
 
-
+first_bamboo = Bamboo(sci_name="Bambusa chungii", com_name="Blue Chungii")
+print(first_bamboo.com_name)
 window.mainloop()    # keeps on screen
