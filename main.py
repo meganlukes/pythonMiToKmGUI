@@ -73,6 +73,12 @@ def spinbox_used():
 spinbox = Spinbox(from_=0, to=10, width=5, command=spinbox_used)
 spinbox.pack(expand=True)
 
+def checkbutton_used():
+   print(checked_state.get())
+checked_state = IntVar()
+checkbutton = Checkbutton(text="Is on?", variable=checked_state, command=checkbutton_used)
+checked_state.get()
+checkbutton.pack(expand=True)
 
 
 
