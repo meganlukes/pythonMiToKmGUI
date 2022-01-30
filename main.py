@@ -49,14 +49,17 @@ def calculate(n, **kwargs):
 
 def button_clicked():
    print("Clack")
-   my_label.config(text="I got clicked")
+
+   word = input.get()
+   my_label.config(text=word)
 
 button  = Button(text="Clickety", command=button_clicked)
 button.pack(expand=True)
 
 
 #entry
-
+input = Entry(width=20)
+input.pack(expand=True)
 
 
 
