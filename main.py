@@ -5,7 +5,8 @@ window.title("First Title")
 window.minsize(width=500, height=300)
 
 #Label
-my_label = Label(text="First Label", font=("Arial", 24, "bold"))
+
+my_label = Label(text="Label", font=("Arial", 24, "bold"))
 my_label.pack(expand=True)
 # my_label.pack() default to top center, side="left" is left center
 
@@ -43,10 +44,18 @@ def calculate(n, **kwargs):
 # first_bamboo = Bamboo(sci_name="Bambusa chungii", com_name="Blue Chungii")
 # print(first_bamboo.com_name)
 
-button  = Button()
+
+#Button
+
+def button_clicked():
+   print("Clack")
+   my_label.config(text="I got clicked")
+
+button  = Button(text="Clickety", command=button_clicked)
+button.pack(expand=True)
 
 
-
+#entry
 
 
 
