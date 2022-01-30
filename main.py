@@ -2,7 +2,7 @@ from tkinter import *
 
 window = Tk()
 window.title("First Title")
-window.minsize(width=500, height=300)
+window.minsize(width=500, height=500)
 
 #Label
 
@@ -50,16 +50,29 @@ def calculate(n, **kwargs):
 def button_clicked():
    print("Clack")
 
-   word = input.get()
+   word = entry_field.get()
    my_label.config(text=word)
 
-button  = Button(text="Clickety", command=button_clicked)
+button = Button(text="Clickety", command=button_clicked)
 button.pack(expand=True)
 
 
 #entry
-input = Entry(width=20)
-input.pack(expand=True)
+entry_field = Entry(width=20)
+entry_field.insert(END, string="New Label")
+entry_field.pack(expand=True)
+
+textbox = Text(height=5, width=30)   #height is number of lines
+textbox.focus()
+textbox.insert(END, "Example of multiline entry box")
+print(textbox.get("1.0", END)) #starting from the first line at character 0
+textbox.pack(expand=True)
+
+def spinbox_used():
+   print(spinbox.get())
+spinbox = Spinbox(from_=0, to=10, width=5, command=spinbox_used)
+spinbox.pack(expand=True)
+
 
 
 
